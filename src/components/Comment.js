@@ -3,11 +3,7 @@ import React from 'react';
 function Comment({comments}) {
 	if( comments ) {
 		return (
-			<div className="comments">
-			{
-				comments.map((cmt, index)=><Item key={index} comment={cmt} />)
-			}
-			</div>
+			<div className="comments">{comments.map((cmt, index)=><Item key={index} comment={cmt} />)}</div>
 		);
 	}
 	return '';
